@@ -15,8 +15,7 @@ int main()
 	string db[12] = { "IS","THIS","HIS","AT","HI","IT","TWO","OF","FAT","THAT","HAT" };
 	string temp = "";
 
-
-	for (int p = 0; p < 4; p++) 
+	for (int p = 0; p < 4; p++)
 	{
 		for (i = 0; i < 4; i++)
 		{
@@ -30,12 +29,12 @@ int main()
 
 				for (int e = 0; e < 10; e++)
 				{
-					if (temp == db[e]) 
+					if (temp == db[e])
 					{
 						found++;
-						cout << "*** Found "<< found << " ***\n";
+						cout << "*** Found " << found << " ***\n";
 					}
-						
+
 
 
 				}
@@ -50,6 +49,76 @@ int main()
 			cout << endl;
 		}
 	}
+
+
+
+	for (int p = 0; p < 4; p++)
+	{
+		for (i = 0; i < 4; i++)
+		{
+			for (j = i; j < 4; j++)
+			{
+				for (k = i; k <= j; k++)
+				{
+					temp = temp + a[k][p];
+				}
+				cout << temp << endl;
+
+				for (int e = 0; e < 10; e++)
+				{
+					if (temp == db[e])
+					{
+						found++;
+						cout << "*** Found " << found << " ***\n";
+					}
+
+
+
+				}
+
+
+				temp.clear();
+
+
+
+
+			}
+			cout << endl;
+		}
+	}
+
+	for (i = 3; i >= 0; i--)
+	{
+		for (j = i; j >= 0; j--)
+		{
+			for (k = i; k >= j; k--)
+			{
+				temp = temp + a[k][k];
+			}
+			cout << temp << endl;
+
+			for (int e = 0; e < 11; e++)
+			{
+				if (temp == db[e])
+				{
+					found++;
+					cout << "*** Found " << found << " ***\n";
+				}
+
+
+
+			}
+
+
+			temp.clear();
+
+
+
+
+		}
+		cout << endl;
+	}
+
 
 	cout << "Total = "<< found ;
 }
